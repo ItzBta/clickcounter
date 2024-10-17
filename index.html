@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <div class="alternativeBody">
+        <div class="clickCounterDiv" id="value">0</div>
+        <button onclick="addValue()" class="clickCounterDiv">Click me!</button>
+        <button onclick="reset()" class="resetCounterDiv">Reset</button>
+    </div>
+    <style>
+        .body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alternativeBody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 400px;
+            
+        }
+
+        .clickCounterDiv {
+            border: 5px solid rgba(240, 248, 255, 0.4);
+            border-radius: 5%;
+            background-color: green;
+            height: 100px;
+            width: 1000px;
+            color: aliceblue;
+            font-size: 5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.1s ease-in-out 0s;
+        }
+
+        .clickCounterDiv:hover {
+            background-color: lightgreen;
+            color: aqua;
+        }
+
+        .resetCounterDiv {
+            background-color: red;
+            height: 100px;
+            width: 1000px;
+            color: aliceblue;
+            font-size: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .resetCounterDiv:hover {
+            background-color: rgb(253, 79, 79);
+            color: aqua;
+        }
+    </style>
+    <script>
+        let value = 0;
+
+        function addValue() {
+            value++;
+            document.getElementById('value').innerHTML = value;
+        }
+        function reset() {
+            value = 0;
+            document.getElementById('value').innerHTML = value;
+        }
+    </script>
+</body>
+
+</html>
